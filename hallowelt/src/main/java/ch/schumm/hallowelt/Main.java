@@ -12,10 +12,15 @@ import org.apache.commons.math.linear.RealMatrix;
 public class Main {
 	
 	public static void main(String[] args) {
+		RealMatrix pInverse = inverse();
+		System.out.println(pInverse);
+	}
+
+	public static RealMatrix inverse() {
 		double[][] matrixData = { {1d,0,0}, {0,1d,0}, {0,0,1d}};
 		RealMatrix m = new Array2DRowRealMatrix(matrixData);
 		RealMatrix pInverse = new LUDecompositionImpl(m).getSolver().getInverse();
-		System.out.println(pInverse);
+		return pInverse;
 	}
 
 }
