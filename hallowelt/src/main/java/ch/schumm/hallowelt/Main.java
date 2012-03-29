@@ -4,6 +4,11 @@ import org.apache.commons.math.linear.Array2DRowRealMatrix;
 import org.apache.commons.math.linear.LUDecompositionImpl;
 import org.apache.commons.math.linear.RealMatrix;
 
+/**
+ * @author rschumm
+ * Diese Klasse ist bloss HalloWelt und dient dazu, die GitHub Infrastruktur
+ * inkl. maven auszuprobieren. 
+ */
 public class Main {
 	
 	public static void main(String[] args) {
