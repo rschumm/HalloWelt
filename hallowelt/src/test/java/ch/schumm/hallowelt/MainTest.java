@@ -9,7 +9,8 @@ public class MainTest {
 
 	@Test
 	public void test() {
-		RealMatrix inverse = Main.inverse();
+		double[][] matrixData = { {1d,0,0}, {0,1d,0}, {0,0,1d}};
+		RealMatrix inverse = Main.inverse(matrixData);
 		assertEquals("Array2DRowRealMatrix{{1.0,0.0,0.0},{0.0,1.0,0.0},{0.0,0.0,1.0}}", inverse.toString()); 
 	}
 

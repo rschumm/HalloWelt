@@ -12,12 +12,12 @@ import org.apache.commons.math.linear.RealMatrix;
 public class Main {
 	
 	public static void main(String[] args) {
-		RealMatrix pInverse = inverse();
+		double[][] matrixData = { {1d,0,0}, {0,1d,0}, {0,0,1d}};
+		RealMatrix pInverse = inverse(matrixData);
 		System.out.println(pInverse);
 	}
 
-	public static RealMatrix inverse() {
-		double[][] matrixData = { {1d,0,0}, {0,1d,0}, {0,0,1d}};
+	public static RealMatrix inverse(double[][] matrixData) {
 		RealMatrix m = new Array2DRowRealMatrix(matrixData);
 		RealMatrix pInverse = new LUDecompositionImpl(m).getSolver().getInverse();
 		return pInverse;
