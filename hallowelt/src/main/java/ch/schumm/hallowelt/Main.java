@@ -17,6 +17,11 @@ public class Main {
 		System.out.println(pInverse);
 	}
 
+	/**
+	 * LU - das erinnert... 
+	 * @param matrixData
+	 * @return die Inverse. 
+	 */
 	public static RealMatrix inverse(double[][] matrixData) {
 		RealMatrix m = new Array2DRowRealMatrix(matrixData);
 		RealMatrix pInverse = new LUDecompositionImpl(m).getSolver().getInverse();
